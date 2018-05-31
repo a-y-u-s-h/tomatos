@@ -1,0 +1,6 @@
+[package]
+name = "tomatos"
+version = "0.1.0"
+authors = ["Ayush Sharma <code.ayush@gmail.com>"]
+
+[dependencies]
