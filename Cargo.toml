@@ -1,6 +1,34 @@
+# ----------------------------------------------------
+
 [package]
 name = "tomatos"
 version = "0.1.0"
 authors = ["Ayush Sharma <code.ayush@gmail.com>"]
 
+[package.metadata.bootimage]
+default-target = "x86_64-tomatos.json"
+
+# ----------------------------------------------------
+
+# [1] (main.rs) -> [2]
+# Step 1 raises two errors. We need to abort on panic
+# so that we can remove one of the errors. Both of these
+# disable stack unwinding on panic.
+
+# profile for `cargo build` : 
+# uncomment next 2 lines if there's no `x86_64-tomatos.json`
+
+# [profile.dev]
+# panic = "abort"
+
+# profile for `cargo build --release` :
+# uncomment next 2 lines if there's no `x86_64-tomatos.json`
+
+# [profile.release]
+# panic = "abort"
+
+# ----------------------------------------------------
+
 [dependencies]
+
+# ----------------------------------------------------
